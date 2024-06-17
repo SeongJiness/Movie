@@ -57,6 +57,8 @@ public class SearchFragment extends Fragment {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
+                clearMovie();
+                adapter.clearItems();  
                 makeRequest(query);
                 return true;
             }

@@ -41,6 +41,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         this.items = items;
     }
 
+    public void clearItems() {
+        items.clear();
+        notifyDataSetChanged();
+    }
+
 
 
     static class ViewHolder extends RecyclerView.ViewHolder {
@@ -72,6 +77,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             textView5.setText("국가 : " + item.nationAlt);
 
         }
+
+
     }
 }
 
